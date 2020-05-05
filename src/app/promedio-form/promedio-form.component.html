@@ -1,0 +1,13 @@
+<div>
+    <h2>Componente Calculo Promedio</h2>
+    <hr>
+    <input type="number" [(ngModel)]="nota1"><br>
+    <input type="number" [(ngModel)]="nota2"><br>
+    <input type="number" [(ngModel)]="nota3"><br>
+    <input type="number" [(ngModel)]="nota4"><br>
+    <button (click)="promedio()">Calcular</button>
+    <div *ngIf="_promedio">
+        <h3>Su promedio es:</h3>
+        <h2>{{_promedio}}</h2>
+    </div>
+</div>

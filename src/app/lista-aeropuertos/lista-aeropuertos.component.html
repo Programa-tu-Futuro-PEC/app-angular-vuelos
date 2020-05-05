@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let a of aeropuertos">
+      <a routerLink="/detalle/{{a.id}}"><span>{{a.nombre}}, {{a.ciudad}}, {{a.pais}}</span></a>
+    </li>
+  </ul>

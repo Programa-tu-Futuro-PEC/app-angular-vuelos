@@ -1,0 +1,10 @@
+<div *ngIf="aeropuerto">
+    <h3>Detalles Aeropuerto {{aeropuerto.nombre}}</h3>
+    <hr>
+    <span>id: {{aeropuerto.id}}</span><br>
+    <span>pais: {{aeropuerto.pais}}</span><br>
+    <span>ciudad: {{aeropuerto.ciudad}}</span><br>
+    <span>iata: {{aeropuerto.iata}}</span><br>
+    <span>icao: {{aeropuerto.icao}}</span><br>
+</div>
+<button mat-raised-button class="primary" (click)="volver()">Volver Atras</button>
