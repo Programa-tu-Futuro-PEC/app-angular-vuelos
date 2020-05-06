@@ -11,6 +11,8 @@ import { from } from 'rxjs';
 import { HttpClientModule }    from '@angular/common/http';
 import { DetalleAeropuertoComponent } from './detalle-aeropuerto/detalle-aeropuerto.component';
 import { ListaAeropuertosComponent } from './lista-aeropuertos/lista-aeropuertos.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ListaAeropuertosComponent } from './lista-aeropuertos/lista-aeropuertos
     FormsModule,
     BrowserAnimationsModule,
     AppMaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
