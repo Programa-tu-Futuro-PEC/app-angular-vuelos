@@ -33,4 +33,9 @@ export class DetalleAeropuertoComponent implements OnInit {
     this.ubicacion.back();
   }
 
+  guardar(id:number, nombre:string, pais:string, ciudad:string, iata:string, icao:string){
+    this.aeropuertoService.modificarAeropuerto({id, nombre, pais, ciudad, iata, icao} as Aeropuerto)
+      .subscribe(_=>this.volver());
+  }
+
 }

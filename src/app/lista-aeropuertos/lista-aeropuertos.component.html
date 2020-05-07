@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <table mat-table [dataSource]="aeropuertos">
     
     <ng-container matColumnDef="id">
@@ -25,6 +26,16 @@
       <td mat-cell *matCellDef="let element"> <a routerLink="/detalle/{{element.id}}">detalle</a></td>
     </ng-container>
 
+    <ng-container matColumnDef="borrar">
+      <th mat-header-cell *matHeaderCellDef>Borrar</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button color="warn" class="material-icons md-24" (click)="borrar(element.id)">
+          <mat-icon>delete</mat-icon>
+        </button></td>
+    </ng-container>
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+<br>
+<button mat-raised-button color="primary" routerLink="/agregar">Agregar</button> 

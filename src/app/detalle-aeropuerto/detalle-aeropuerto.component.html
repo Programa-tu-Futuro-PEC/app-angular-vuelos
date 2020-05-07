@@ -1,10 +1,31 @@
-<div *ngIf="aeropuerto">
+<div *ngIf="aeropuerto" style="margin: 1em;">
     <h3>Detalles Aeropuerto {{aeropuerto.nombre}}</h3>
     <hr>
-    <span>id: {{aeropuerto.id}}</span><br>
-    <span>pais: {{aeropuerto.pais}}</span><br>
-    <span>ciudad: {{aeropuerto.ciudad}}</span><br>
-    <span>iata: {{aeropuerto.iata}}</span><br>
-    <span>icao: {{aeropuerto.icao}}</span><br>
+    <mat-form-field style="width: 100%;">
+        <mat-label>id:</mat-label>
+        <input matInput #id value="{{aeropuerto.id}}" disabled="true">
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Nombre:</mat-label>
+        <input matInput #nombre value="{{aeropuerto.nombre}}">
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Ciudad:</mat-label>
+        <input matInput #ciudad value="{{aeropuerto.ciudad}}">
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Pais:</mat-label>
+        <input matInput #pais value="{{aeropuerto.pais}}">
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>IATA:</mat-label>
+        <input matInput #iata value="{{aeropuerto.iata}}">
+    </mat-form-field>
+    <mat-form-field style="width: 100%;">
+        <mat-label>ICAO:</mat-label>
+        <input matInput #icao value="{{aeropuerto.icao}}">
+    </mat-form-field>
+
+<button mat-raised-button color="primary" (click)="volver()" style="margin: 1em;">Volver Atras</button>
+<button mat-raised-button color="warn" (click)="guardar(id.value, nombre.value, pais.value, ciudad.value, iata.value,icao.value)">Guardar</button>
 </div>
-<button mat-raised-button class="primary" (click)="volver()">Volver Atras</button>

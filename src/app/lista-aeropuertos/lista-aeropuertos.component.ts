@@ -11,7 +11,7 @@ import { Router, NavigationEnd } from '@angular/router';
 export class ListaAeropuertosComponent implements OnInit ,OnDestroy{
 
   aeropuertos: Aeropuerto[];
-  displayedColumns: string[] = ['id','nombre','ciudad','pais','detalle'];
+  displayedColumns: string[] = ['id','nombre','ciudad','pais','detalle', 'borrar'];
   mySubscription:any;
 
   constructor( private router: Router, private aeropuertoService: AeropuertoService){
@@ -49,6 +49,11 @@ export class ListaAeropuertosComponent implements OnInit ,OnDestroy{
   obtenerAeropuertos() {
     this.aeropuertoService.obtenerAeropuertos()
       .subscribe(aeropuertos => this.aeropuertos=aeropuertos);
+  }
+
+  borrar(id: number){
+    this.aeropuertoService.borrarAeropuerto(id)
+      .subscribe(_=>this.obtenerAeropuertos());
   }
 
 }

@@ -13,13 +13,15 @@ import { DetalleAeropuertoComponent } from './detalle-aeropuerto/detalle-aeropue
 import { ListaAeropuertosComponent } from './lista-aeropuertos/lista-aeropuertos.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
+import { AgregarAeropuertoComponent } from './agregar-aeropuerto/agregar-aeropuerto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PromedioFormComponent,
     DetalleAeropuertoComponent,
-    ListaAeropuertosComponent
+    ListaAeropuertosComponent,
+    AgregarAeropuertoComponent
   ],
   imports: [
     BrowserModule,
